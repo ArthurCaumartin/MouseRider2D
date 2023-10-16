@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424281747}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -305,16 +305,37 @@ MonoBehaviour:
     angle: 0
     UpAxis: {x: 0, y: 0, z: 0}
   - controlPoints:
-    - {x: -0.32, y: 0, z: 0}
+    - {x: 14.638231, y: 8.54756, z: 0}
     - {x: 3.67, y: 0, z: 0}
-    - {x: 7.66, y: 0, z: 0}
+    - {x: -7.2982306, y: -8.54756, z: 0}
     mode: 0
     angle: 0
     UpAxis: {x: 0, y: 0, z: 0}
   - controlPoints:
-    - {x: 10.9614315, y: -6.1502624, z: 0}
-    - {x: 13.96276, y: -4.5265927, z: 0}
-    - {x: 16.964088, y: -2.9029233, z: 0}
+    - {x: 7.3405886, y: -6.625127, z: 0}
+    - {x: 10.341917, y: -5.001457, z: 0}
+    - {x: 13.34325, y: -3.3777878, z: 0}
+    mode: 0
+    angle: 0
+    UpAxis: {x: 0, y: 0, z: 0}
+  - controlPoints:
+    - {x: 19.245628, y: 4.970695, z: 0}
+    - {x: 26.227434, y: -3.4535623, z: 0}
+    - {x: 33.20924, y: -11.87782, z: 0}
+    mode: 0
+    angle: 0
+    UpAxis: {x: 0, y: 0, z: 0}
+  - controlPoints:
+    - {x: 12.753156, y: -15.681323, z: 0}
+    - {x: 14.739081, y: -8.455342, z: 0}
+    - {x: 16.725006, y: -1.2293615, z: 0}
+    mode: 0
+    angle: 0
+    UpAxis: {x: 0, y: 0, z: 0}
+  - controlPoints:
+    - {x: 23.761501, y: 7.0371075, z: 0}
+    - {x: 30.599064, y: 7.69118, z: 0}
+    - {x: 37.436634, y: 8.345254, z: 0}
     mode: 0
     angle: 0
     UpAxis: {x: 0, y: 0, z: 0}
@@ -381,6 +402,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2338412339294692699, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
+      propertyPath: _speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338412339294692699, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
+      propertyPath: _spline
+      value: 
+      objectReference: {fileID: 1170602123}
     - target: {fileID: 4344868079929548154, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
       propertyPath: m_Name
       value: Container
