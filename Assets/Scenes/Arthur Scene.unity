@@ -291,9 +291,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlPointsList:
   - controlPoints:
-    - {x: -14.143101, y: -1.0004612, z: 0}
-    - {x: -12.387784, y: 1.2628354, z: 0}
-    - {x: -10.632467, y: 3.526132, z: 0}
+    - {x: -37.73091, y: -1.2531881, z: 0}
+    - {x: -35.975594, y: 1.0101085, z: 0}
+    - {x: -34.220276, y: 3.273405, z: 0}
     mode: 0
     angle: 0
     UpAxis: {x: 0, y: 0, z: 0}
