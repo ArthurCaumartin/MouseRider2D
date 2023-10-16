@@ -1,14 +1,18 @@
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovements : MonoBehaviour
 {
-    public Transform transformPlayer;
+    public GameObject Player;
     public Vector2 playerPosition;
     private void Update() 
     {
         // transformPlayer = Vector2.Lerp()
-        callba
+        Vector3 mousePos = Mouse.current.position.ReadValue();
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        Player.transform.position = new Vector2(mousePos.x, mousePos.y);
+        // mousePos.z=Camera.main.nearClipPlane;
     }
     public void OnMousePosition(InputAction.CallbackContext callback)
     {
