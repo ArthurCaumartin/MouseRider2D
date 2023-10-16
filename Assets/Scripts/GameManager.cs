@@ -5,9 +5,20 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    [SerializeField] private SplineMover _containerSplineMover;
 
     void Awake()
     {
         instance = this;
+    }
+
+    public void EndLevel()
+    {
+        print("Level End !");
+    }
+
+    public void PlayerHit()
+    {
+        print("Wow t nul...");
     }
 }
