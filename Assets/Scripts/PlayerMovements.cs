@@ -4,26 +4,58 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovements : MonoBehaviour
 {
-    public GameObject Player;
-    public float distanceMax;
-    public float speed;
-    Vector2 centerWorldPos;
-    Vector2 mousePos;
+    [SerializeField] private float _distanceMax;
+    [SerializeField] private float _speed;
+    private float _playerDistance;
 
-    private void Update() 
+    private Vector2 _worldMousePosition;
+    private Vector2 _containerMousePosition;
+
+    private Vector2 _screenCenter;
+    private Vector2 _screenCenterWorldPos;
+
+
+    private void Update()
+    {
+
+        ComputeVariable();
+
+        Vector2 positionToSet;
+        positionToSet = SetPositionToSet();
+
+        transform.localPosition = Vector2.Lerp(transform.localPosition, positionToSet, Time.deltaTime * _speed);
+    }
+
+    private Vector2 SetPositionToSet()
     {
         Vector2 positionToSet;
-        
-        mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-
-        Vector2 center = new Vector2(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
-        centerWorldPos = Camera.main.ScreenToWorldPoint(center);
-
-        if(Vector2.Distance(centerWorldPos, mousePos) > distanceMax)
-            positionToSet = (mousePos - centerWorldPos).normalized * distanceMax;
+        if (Vector2.Distance(_screenCenterWorldPos, _worldMousePosition) < _distanceMax)
+        {
+            print("In range");
+            positionToSet = _containerMousePosition;
+        }
         else
-            positionToSet = mousePos;
+        {
+            print("Not In range");
+            positionToSet = (_worldMousePosition - _screenCenterWorldPos).normalized * _distanceMax;
+        }
 
-        transform.position = Vector2.Lerp(transform.position, positionToSet, Time.deltaTime* speed);
+        return positionToSet;
+    }
+
+    private void ComputeVariable()
+    {
+        _worldMousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        _containerMousePosition = transform.parent.InverseTransformPoint(_worldMousePosition);
+
+        _screenCenter = new Vector2(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
+        _screenCenterWorldPos = Camera.main.ScreenToWorldPoint(_screenCenter);
+
+        _playerDistance = Vector2.Distance(_screenCenterWorldPos, transform.position);
+    }
+
+    public float GetPlayerPositionRatio()
+    {
+        return Mathf.InverseLerp(0, _distanceMax, _playerDistance);
     }
 }
