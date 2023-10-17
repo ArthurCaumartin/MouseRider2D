@@ -20,6 +20,12 @@ public class SplineMover : MonoBehaviour
 
     void Update()
     {
+        if(!_spline)
+        {
+            print("Spline not Set to container !");
+            return;
+        }
+
         if(!_isMoving)
             return;
 
