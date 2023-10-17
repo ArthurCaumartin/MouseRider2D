@@ -6,11 +6,11 @@ using UnityEngine;
 public class SplineMover : MonoBehaviour
 {
     [SerializeField] public bool _isMoving = true;
-    [SerializeField] private Spline _spline;
+    [SerializeField] private Spline2D _spline;
     [SerializeField] private float _speed;
     [SerializeField] private float _distanceOffSet;
     private float _distance;
-    private Vector3 _newPosition;
+    private Vector3 _newPosition = Vector3.zero;
     private Vector3 _lastFramePosition;
 
     void Start()
