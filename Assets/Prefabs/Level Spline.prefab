@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2940246753853475495}
-  - component: {fileID: 8586047983496858387}
   m_Layer: 0
   m_Name: OnSpline
   m_TagString: Untagged
@@ -32,26 +31,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1964880956330706713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8586047983496858387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2354402013757432427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec975a4a443de14595300f060bf7484, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spline: {fileID: 3835569180683314459}
-  _distanceBetweenObject: 4
-  isRandom: 0
-  x_max: 3
-  x_min: -3
-  y_max: 3
-  y_min: -3
-  _repeteadObject: {fileID: 4083778467355588724, guid: efae9736678bd214d993290ead551f9b, type: 3}
 --- !u!1 &2966496377526968170
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1964880956330706713}
-  - component: {fileID: 3835569180683314459}
+  - component: {fileID: 7052721701951116858}
   m_Layer: 0
   m_Name: Level Spline
   m_TagString: Untagged
@@ -85,7 +64,7 @@ Transform:
   - {fileID: 2940246753853475495}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3835569180683314459
+--- !u!114 &7052721701951116858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,63 +73,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 2966496377526968170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eebd59487089224098c18fe0a03cde1, type: 3}
+  m_Script: {fileID: 11500000, guid: a3bb71b28033bb54b9752bd425e5cc86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controlPointsList:
   - controlPoints:
-    - {x: -26.948513, y: -0.42320418, z: 0}
-    - {x: -21.02851, y: -0.42320418, z: 0}
-    - {x: -15.108505, y: -0.42320418, z: 0}
+    - {x: -42.08319, y: 1.3873587}
+    - {x: -33.66655, y: 2.6822248}
+    - {x: -25.249914, y: 3.9770904}
     mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}
   - controlPoints:
-    - {x: -19.319046, y: 3.3982687, z: 0}
-    - {x: -13.563466, y: 6.699266, z: 0}
-    - {x: -7.807886, y: 10.000263, z: 0}
+    - {x: -26.349627, y: 7.4018908}
+    - {x: -18.672915, y: 6.939437}
+    - {x: -10.996202, y: 6.476983}
     mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}
   - controlPoints:
-    - {x: -18.138748, y: -7.711152, z: 0}
-    - {x: -11.786007, y: -7.0971966, z: 0}
-    - {x: -5.4332657, y: -6.483241, z: 0}
+    - {x: -15.185512, y: -5.1946034}
+    - {x: -8.9614105, y: -2.7720664}
+    - {x: -2.7373095, y: -0.34952927}
     mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}
   - controlPoints:
-    - {x: -3.4220543, y: 8.792884, z: 0}
-    - {x: 2.856864, y: 10.084901, z: 0}
-    - {x: 9.135782, y: 11.376918, z: 0}
+    - {x: 2.551773, y: 10.020883}
+    - {x: 8.981747, y: 10.084112}
+    - {x: 15.41172, y: 10.147342}
     mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}
   - controlPoints:
-    - {x: -0.4245901, y: -9.054037, z: 0}
-    - {x: 7.596753, y: -9.043936, z: 0}
-    - {x: 15.618096, y: -9.033834, z: 0}
+    - {x: 21.061363, y: -5.081084}
+    - {x: 25.630041, y: -3.0495384}
+    - {x: 30.198719, y: -1.017993}
     mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}
-  - controlPoints:
-    - {x: 10.096014, y: 6.5846605, z: 0}
-    - {x: 17.07653, y: 7.8842382, z: 0}
-    - {x: 24.057047, y: 9.183816, z: 0}
-    mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}
-  - controlPoints:
-    - {x: 14.60556, y: 1.9242039, z: 0}
-    - {x: 19.615755, y: -3.6269202, z: 0}
-    - {x: 24.62595, y: -9.178044, z: 0}
-    mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}
-  - controlPoints:
-    - {x: 20.824635, y: 5.4356146, z: 0}
-    - {x: 24.778849, y: 0.9436865, z: 0}
-    - {x: 28.733063, y: -3.5482416, z: 0}
-    mode: 0
-    angle: 0
-    UpAxis: {x: 0, y: 0, z: 0}

@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isMoving: 1
   _spline: {fileID: 0}
-  _speed: 3
+  _speed: 8
   _distanceOffSet: 0
 --- !u!1 &5728052353156042099
 GameObject:
@@ -495,6 +495,14 @@ PrefabInstance:
     - target: {fileID: 54360034983294399, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001168102898853690, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: _speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001168102898853690, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: _distanceMax
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
