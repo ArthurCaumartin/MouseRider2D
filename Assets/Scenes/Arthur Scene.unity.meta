@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/OscarScene.unity.meta
+guid: 171c1ab06b7c596449d73c98b2852297
+========
 guid: 3db69fc362741464fbfe617798fb1c35
+>>>>>>>> main:Assets/Scenes/Arthur Scene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
