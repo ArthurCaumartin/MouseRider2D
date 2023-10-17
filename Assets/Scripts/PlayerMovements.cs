@@ -5,18 +5,25 @@ using UnityEngine.InputSystem;
 public class PlayerMovements : MonoBehaviour
 {
     public GameObject Player;
-    public Vector2 playerPosition;
+    public float distanceMax;
+    public float speed;
+    Vector2 centerWorldPos;
+    Vector2 mousePos;
+
     private void Update() 
     {
-        Vector3 mousePos = Mouse.current.position.ReadValue();
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        Player.transform.position = new Vector2(mousePos.x, mousePos.y);
-        // transformPlayer = Vector2.Lerp()
-        // mousePos.z=Camera.main.nearClipPlane;
-    }
-    public void OnMousePosition(InputAction.CallbackContext callback)
-    {
-        // print(callback.ReadValue<Vector2>());
-    }
+        Vector2 positionToSet;
+        
+        mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
+        Vector2 center = new Vector2(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2);
+        centerWorldPos = Camera.main.ScreenToWorldPoint(center);
+
+        if(Vector2.Distance(centerWorldPos, mousePos) > distanceMax)
+            positionToSet = (mousePos - centerWorldPos).normalized * distanceMax;
+        else
+            positionToSet = mousePos;
+
+        transform.position = Vector2.Lerp(transform.position, positionToSet, Time.deltaTime* speed);
+    }
 }

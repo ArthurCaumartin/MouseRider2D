@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2125395713846723856, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
+      propertyPath: m_Name
+      value: Sprite
+      objectReference: {fileID: 0}
     - target: {fileID: 2338412339294692699, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
       propertyPath: _spline
       value: 
@@ -266,64 +270,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Container
       objectReference: {fileID: 0}
-    - target: {fileID: 5053908909608734319, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053908909608734319, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053908909608734319, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Time
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 6484389572642985834, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
+      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].time
+    - target: {fileID: 6484389572642985834, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
+      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+    - target: {fileID: 8806220833304603854, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806220833304603854, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inSlope
-      value: -0.00036823715
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outSlope
-      value: -0.00036823715
-      objectReference: {fileID: 0}
-    - target: {fileID: 6340473407264228382, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outWeight
-      value: 0.6054803
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2125395713846723856, guid: d7e72709d32452745ba916b90b068ecd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7e72709d32452745ba916b90b068ecd, type: 3}

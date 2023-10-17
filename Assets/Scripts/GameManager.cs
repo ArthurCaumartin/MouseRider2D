@@ -5,8 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    [SerializeField] private SplineMover _containerSplineMover;
-
     void Awake()
     {
         instance = this;
@@ -15,8 +13,6 @@ public class GameManager : MonoBehaviour
     [ContextMenu("EndLevel")]
     public void EndLevel()
     {
-        _containerSplineMover._isMoving = false;
-
         print("Level End !");
     }
 
