@@ -12,8 +12,11 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    [ContextMenu("EndLevel")]
     public void EndLevel()
     {
+        _containerSplineMover._isMoving = false;
+
         print("Level End !");
     }
 
