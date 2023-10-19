@@ -14,6 +14,8 @@ public class PlayerMovements : MonoBehaviour
     private Vector2 _screenCenter;
     private Vector2 _screenCenterWorldPos;
 
+    private Vector2 velocity;
+
 
     private void Update()
     {
@@ -23,7 +25,8 @@ public class PlayerMovements : MonoBehaviour
         Vector2 positionToSet;
         positionToSet = SetPositionToSet();
 
-        transform.localPosition = Vector2.Lerp(transform.localPosition, positionToSet, Time.deltaTime * _speed);
+        // transform.localPosition = Vector2.Lerp(transform.localPosition, positionToSet, Time.deltaTime * _speed);
+        transform.localPosition = Vector2.SmoothDamp(transform.localPosition, positionToSet, ref velocity, _speed);
     }
 
     private Vector2 SetPositionToSet()
