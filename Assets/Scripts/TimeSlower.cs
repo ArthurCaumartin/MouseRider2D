@@ -14,20 +14,20 @@ public class TimeSlower : MonoBehaviour
     [SerializeField] private float _slowTimeDeccay;
     [SerializeField] private float _slowTimeRegen;
     private float _currentSlowTimeCappacity;
-    private float currentItmeScale;
+    private float currentTimeScale;
 
     void Update()
     {
-        currentItmeScale = Time.timeScale;
+        currentTimeScale = Time.timeScale;
         if(_isSlowingTime && _currentSlowTimeCappacity >= _slowTimeUseThresold)
         {
-            Time.timeScale = Mathf.Lerp(Time.timeScale, _slowTimeScale, Time.deltaTime * _transitionSpeed);
-            _currentSlowTimeCappacity += Time.deltaTime * _slowTimeDeccay;
+            Time.timeScale = Mathf.Lerp(currentTimeScale, _slowTimeScale, Time.unscaledDeltaTime * _transitionSpeed);
+            _currentSlowTimeCappacity -= Time.unscaledDeltaTime * _slowTimeDeccay;
         }
         else
         {
-            Time.timeScale = Mathf.Lerp(Time.timeScale, 1, Time.deltaTime * _transitionSpeed);
-            _currentSlowTimeCappacity += Time.deltaTime * _slowTimeRegen;
+            Time.timeScale = Mathf.Lerp(currentTimeScale, 1, Time.unscaledDeltaTime * _transitionSpeed);
+            _currentSlowTimeCappacity += Time.unscaledDeltaTime * _slowTimeRegen;
         }
 
         _currentSlowTimeCappacity = Mathf.Clamp(_currentSlowTimeCappacity, 0, _maxSlowTimeCappacity);
