@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SplineMover : MonoBehaviour
 {
+    [SerializeField] private bool _isLooping;
     [SerializeField] public bool _isMoving = true;
     [SerializeField] private Spline2D _spline;
     [SerializeField] private float _speed;
@@ -34,8 +36,14 @@ public class SplineMover : MonoBehaviour
 
         transform.position = _newPosition;
 
+
         if(transform.position == _lastFramePosition)
         {
+            if(_isLooping)
+            {
+                _distance = 0;
+                return;
+            }
             GameManager.instance.EndLevel();
             _isMoving = false;
         }
