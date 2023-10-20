@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab77a02f1902f3e49b5c010b9baa6bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isLooping: 0
   _isMoving: 1
   _spline: {fileID: 0}
   _speed: 8
@@ -234,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab77a02f1902f3e49b5c010b9baa6bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isLooping: 0
   _isMoving: 1
   _spline: {fileID: 0}
   _speed: 3
@@ -496,9 +498,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3025651839647225376, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025651839647225376, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025651839647225376, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4817475900826590603}
+    - target: {fileID: 3025651839647225376, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025651839647225376, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSlowTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025651839647225376, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TimeSlower, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025651839647225376, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5001168102898853690, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: _speed
-      value: 5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5001168102898853690, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: _distanceMax
@@ -507,10 +537,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1836170564864922090, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8198301565777480969}
   m_SourcePrefab: {fileID: 100100000, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+--- !u!1 &3190066476402270984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1836170564864922090, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+  m_PrefabInstance: {fileID: 3836512627830010594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8198301565777480969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190066476402270984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c64cf36951c8314aa6392364d1ce2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Head: {fileID: 3190066476402270984}
+  lastFramePosition: {x: 0, y: 0, z: 0}
 --- !u!4 &3890872314718553949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 54360034983294399, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
   m_PrefabInstance: {fileID: 3836512627830010594}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4817475900826590603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8639341311291141993, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+  m_PrefabInstance: {fileID: 3836512627830010594}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33fb975b2545814c887c9465a59f523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
