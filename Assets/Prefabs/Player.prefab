@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 54360034983294399}
   - component: {fileID: 3025651839647225376}
   - component: {fileID: 5001168102898853690}
-  - component: {fileID: 1614104808901142043}
   - component: {fileID: 5839253560899802700}
+  - component: {fileID: 8639341311291141993}
+  - component: {fileID: 1614104808901142043}
   - component: {fileID: 3387749848706052812}
   m_Layer: 0
   m_Name: Player
@@ -80,6 +81,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 339376dd-6c68-42b4-948a-e6288b202103
     m_ActionName: Controller/Mouse Position[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d5b994c1-696f-4b31-aa5d-68244d9358e0
+    m_ActionName: Controller/SlowTime[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controller
@@ -97,9 +102,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c6d888e9c33864684ca767e3ac1af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 34002904866851757}
-  distanceMax: 5
-  speed: 10
+  _distanceMax: 0
+  _speed: 0
+--- !u!114 &5839253560899802700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34002904866851757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1bf2334c251234781054cd54f80233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8639341311291141993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34002904866851757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33fb975b2545814c887c9465a59f523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isSlowingTime: 0
+  _slowTimeScale: 0
+  _transitionSpeed: 0
+  _slowTimeUseThresold: 0
+  _maxSlowTimeCappacity: 0
+  _slowTimeDeccay: 0
+  _slowTimeRegen: 0
 --- !u!58 &1614104808901142043
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,18 +170,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5839253560899802700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34002904866851757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be1bf2334c251234781054cd54f80233, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &3387749848706052812
 Rigidbody2D:
   serializedVersion: 4
