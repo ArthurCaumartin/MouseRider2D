@@ -26,7 +26,7 @@ public class PlayerMovements : MonoBehaviour
         positionToSet = SetPositionToSet();
 
         // transform.localPosition = Vector2.Lerp(transform.localPosition, positionToSet, Time.deltaTime * _speed);
-        transform.localPosition = Vector2.SmoothDamp(transform.localPosition, positionToSet, ref velocity, _speed);
+        transform.localPosition = Vector2.SmoothDamp(transform.localPosition, positionToSet, ref velocity, _speed, Mathf.Infinity, Time.unscaledDeltaTime);
     }
 
     private Vector2 SetPositionToSet()
