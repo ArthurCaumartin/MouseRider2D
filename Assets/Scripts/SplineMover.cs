@@ -8,7 +8,7 @@ public class SplineMover : MonoBehaviour
 {
     [SerializeField] private bool _isLooping;
     [SerializeField] public bool _isMoving = true;
-    [SerializeField] private Spline2D _spline;
+    [SerializeField] private Spline _spline;
     [SerializeField] private float _speed;
     [SerializeField] private float _distanceOffSet;
     private float _distance;
