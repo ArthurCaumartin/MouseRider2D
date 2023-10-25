@@ -342,8 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maskTransform: {fileID: 7977555724395955718}
   _speed: 1
-  _isMouseOver: 0
-  _time: 0
+  _resetOnEvent: 0
   _onCompleteEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -406,8 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maskTransform: {fileID: 4791670357173841351}
   _speed: 1
-  _isMouseOver: 0
-  _time: 0
+  _resetOnEvent: 1
   _onCompleteEvent:
     m_PersistentCalls:
       m_Calls:
