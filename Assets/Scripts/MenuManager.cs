@@ -7,21 +7,12 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _mainMenu;
-    [Space]
     [SerializeField] private Button _startGameButton;
-    [SerializeField] private Button _quitButton;
 
 
-    void Start()
+    public void StartLevel()
     {
-        //TODO Set les refs
-        _startGameButton.onClick.AddListener(StartLevel);
-        _quitButton.onClick.AddListener(QuitGame);
-    }
-
-    void StartLevel()
-    {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("BaseLevel");
     }
 
     void DisableAll()
@@ -34,7 +25,6 @@ public class MenuManager : MonoBehaviour
         DisableAll();
         _mainMenu.SetActive(true);
     }
-
 
     public void QuitGame()
     {

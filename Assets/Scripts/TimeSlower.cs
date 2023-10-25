@@ -31,7 +31,9 @@ public class TimeSlower : MonoBehaviour
         }
 
         _currentSlowTimeCappacity = Mathf.Clamp(_currentSlowTimeCappacity, 0, _maxSlowTimeCappacity);
-        CanvasManager.instance.UpdateSlowtimeGauge(Mathf.InverseLerp(_slowTimeUseThresold, _maxSlowTimeCappacity, _currentSlowTimeCappacity));
+
+        if(CanvasManager.instance)
+            CanvasManager.instance.UpdateSlowtimeGauge(Mathf.InverseLerp(_slowTimeUseThresold, _maxSlowTimeCappacity, _currentSlowTimeCappacity));
     }
 
     public void OnSlowTime(InputAction.CallbackContext callback)
