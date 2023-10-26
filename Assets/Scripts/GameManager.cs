@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,5 +20,10 @@ public class GameManager : MonoBehaviour
     public void PlayerHit()
     {
         print("Wow t nul...");
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

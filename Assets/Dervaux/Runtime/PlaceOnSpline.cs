@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlaceOnSpline : MonoBehaviour
 {
 
-    public Spline2D _spline;
+    public Spline _spline;
 
     [SerializeField,Range(0,100)] private float _distanceBetweenObject = 1;
     [SerializeField] private Vector2 _offSet;
@@ -15,8 +15,6 @@ public class PlaceOnSpline : MonoBehaviour
     [SerializeField] private GameObject _repeteadObject;
 
 
-
-    // Start is called before the first frame update
     void Start()
     {
         if (_spline == null)
@@ -40,11 +38,5 @@ public class PlaceOnSpline : MonoBehaviour
             Vector3 eulerRandom = new Vector3(0, 0, Random.Range(0, 360));
             GameObject.Instantiate(_repeteadObject, position + offSetToSet, Quaternion.Euler(eulerRandom), transform);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
