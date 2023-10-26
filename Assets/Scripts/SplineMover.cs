@@ -50,4 +50,9 @@ public class SplineMover : MonoBehaviour
 
         _lastFramePosition = transform.position;
     }
+
+    public void SetSpeed(float value)
+    {
+        _speed = value;
+    }
 }
