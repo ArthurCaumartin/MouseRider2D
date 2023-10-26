@@ -37,7 +37,8 @@ public class PlaceOnSpline : MonoBehaviour
             offSetToSet.x = Random.Range(-_offSet.x, _offSet.x);
             offSetToSet.y = Random.Range(-_offSet.y, _offSet.y);
 
-            GameObject.Instantiate(_repeteadObject, position + offSetToSet, Quaternion.identity, transform);
+            Vector3 eulerRandom = new Vector3(0, 0, Random.Range(0, 360));
+            GameObject.Instantiate(_repeteadObject, position + offSetToSet, Quaternion.Euler(eulerRandom), transform);
         }
     }
 
