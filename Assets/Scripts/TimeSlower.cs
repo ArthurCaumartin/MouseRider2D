@@ -2,49 +2,79 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeSlower : MonoBehaviour
 {
-    [SerializeField] private bool _isSlowingTime;
-    [SerializeField, Range(0.1f, 1f)] private float _slowTimeScale;
-    [SerializeField] private float _transitionSpeed;
+    [SerializeField] private float _slowTimeScale;
     [Space]
-    [SerializeField] private float _slowTimeUseThresold;
-    [SerializeField] private float _maxSlowTimeCappacity;
-    [SerializeField] private float _slowTimeDeccay;
-    [SerializeField] private float _slowTimeRegen;
-    private float _currentSlowTimeCappacity;
-    private float currentTimeScale;
+    [SerializeField] private int _chargeNumber;
+    [SerializeField] private float _durationPerCharge;
+    [Space]
+    [SerializeField] private float _rechargeCoolDown;
+    private float _currentSlowTimeDuration;
+    private int _maxChargeNumber;
+    private float _cooldownTimer;
+
+    void Start()
+    {
+        _maxChargeNumber = _chargeNumber;
+    }
 
     void Update()
     {
-        currentTimeScale = Time.timeScale;
-        if(_isSlowingTime && _currentSlowTimeCappacity >= _slowTimeUseThresold)
+        Slowtime();
+        ChargeCoolDown();
+    }
+
+    private void Slowtime()
+    {
+        if (_currentSlowTimeDuration > 0)
         {
-            Time.timeScale = Mathf.Lerp(currentTimeScale, _slowTimeScale, Time.unscaledDeltaTime * _transitionSpeed);
-            _currentSlowTimeCappacity -= Time.unscaledDeltaTime * _slowTimeDeccay;
+            _currentSlowTimeDuration -= Time.unscaledDeltaTime;
+            Time.timeScale = _slowTimeScale;
         }
         else
         {
-            Time.timeScale = Mathf.Lerp(currentTimeScale, 1, Time.unscaledDeltaTime * _transitionSpeed);
-            _currentSlowTimeCappacity += Time.unscaledDeltaTime * _slowTimeRegen;
+            Time.timeScale = 1;
         }
+    }
 
-        _currentSlowTimeCappacity = Mathf.Clamp(_currentSlowTimeCappacity, 0, _maxSlowTimeCappacity);
+    private void ChargeCoolDown()
+    {
+        if(_chargeNumber < _maxChargeNumber)
+        {
+            _cooldownTimer += Time.unscaledDeltaTime;
+            if(_cooldownTimer > _rechargeCoolDown)
+            {
+                _chargeNumber++;
+                _cooldownTimer = 0;
+            }
+        }
+    }
 
-        if(CanvasManager.instance)
-            CanvasManager.instance.UpdateSlowtimeGauge(Mathf.InverseLerp(_slowTimeUseThresold, _maxSlowTimeCappacity, _currentSlowTimeCappacity));
+    void AddSlowTime()
+    {
+        if(_chargeNumber == 0)
+            return;
+        
+        _chargeNumber -= 1;
+        _currentSlowTimeDuration += _durationPerCharge;
     }
 
     public void OnSlowTime(InputAction.CallbackContext callback)
     {
-        if(callback.phase == InputActionPhase.Performed)
+        if(callback.performed)
         {
-            _isSlowingTime = true;
+            AddSlowTime();
         }
-        else
-        {
-            _isSlowingTime = false;
-        }
+    }
+
+    public float GetFillAmount()
+    {
+        float maxValue = _rechargeCoolDown * _maxChargeNumber;
+        float currentCooldown = (_rechargeCoolDown * _chargeNumber) + _cooldownTimer;
+        
+        return Mathf.InverseLerp(0, maxValue, currentCooldown);
     }
 }
