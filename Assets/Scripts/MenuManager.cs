@@ -10,6 +10,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _levelSelect;
     [SerializeField] private Button _startGameButton;
 
+    void Start()
+    {
+        print("Menu call trans");
+        Transitioner.instance.DoGameTransition(true, null);
+    }
+
     public void StartLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
