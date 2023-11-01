@@ -13,12 +13,12 @@ public class PlayerDeath : MonoBehaviour
             GetComponentInParent<SplineMover>()._isMoving  = false;
             shaking.GetComponent<Shaking>();
             shaking.start = true;
-            new WaitForSeconds(3);
+            new WaitForSeconds(3f);
             CameraDezoom();
         }
    }
    public void CameraDezoom()
    {
-        SizeCamera.DOOrthoSize(9f, 7.547334f);
+        SizeCamera.DOOrthoSize(9f, 3f);
    }
 }
