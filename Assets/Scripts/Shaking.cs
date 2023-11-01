@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using DG.Tweening;
 public class Shaking : MonoBehaviour
 {
     public bool start = false;
