@@ -205,12 +205,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   duration: 1.5
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &7203220591513525736
 GameObject:
   m_ObjectHideFlags: 0
