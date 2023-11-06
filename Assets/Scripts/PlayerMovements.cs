@@ -15,11 +15,14 @@ public class PlayerMovements : MonoBehaviour
     private Vector2 _screenCenterWorldPos;
 
     private Vector2 velocity;
+    private bool _canMove = false;
 
 
     private void Update()
     {
-
+        if(!_canMove)
+            return;
+            
         ComputeVariable();
 
         Vector2 positionToSet;
@@ -60,5 +63,10 @@ public class PlayerMovements : MonoBehaviour
     public float GetPlayerPositionRatio()
     {
         return Mathf.InverseLerp(0, _distanceMax, _playerDistance);
+    }
+
+    public void CanMove(bool value)
+    {
+        _canMove = value;
     }
 }

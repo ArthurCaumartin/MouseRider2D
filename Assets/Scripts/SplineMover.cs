@@ -7,10 +7,10 @@ using UnityEngine;
 public class SplineMover : MonoBehaviour
 {
     [SerializeField] private bool _isLooping;
-    [SerializeField] public bool _isMoving = true;
     [SerializeField] private Spline _spline;
     [SerializeField] private float _speed;
     [SerializeField] private float _distanceOffSet;
+    public bool _isMoving = false;
     private float _distance;
     private Vector3 _newPosition = Vector3.zero;
     private Vector3 _lastFramePosition;
@@ -54,5 +54,10 @@ public class SplineMover : MonoBehaviour
     public void SetSpeed(float value)
     {
         _speed = value;
+    }
+
+    public void CanMove(bool value)
+    {
+        _isMoving = value;
     }
 }
