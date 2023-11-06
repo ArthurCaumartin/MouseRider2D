@@ -5,7 +5,6 @@ public class Shaking : MonoBehaviour
 {
     public bool start = false;
     public float duration = 1.5f;
-    public AnimationCurve curve;
     void Update()
     {
         if(start == true)

@@ -66,10 +66,14 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 339376dd-6c68-42b4-948a-e6288b202103
+    m_ActionName: Controller/Mouse Position[/Mouse/position]
+  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5001168102898853690}
-        m_TargetAssemblyTypeName: PlayerMovements, Assembly-CSharp
-        m_MethodName: OnMousePosition
+      - m_Target: {fileID: 8639341311291141993}
+        m_TargetAssemblyTypeName: TimeSlower, Assembly-CSharp
+        m_MethodName: OnSlowTime
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -79,10 +83,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 339376dd-6c68-42b4-948a-e6288b202103
-    m_ActionName: Controller/Mouse Position[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: d5b994c1-696f-4b31-aa5d-68244d9358e0
     m_ActionName: Controller/SlowTime[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
@@ -117,7 +117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shaking: {fileID: 0}
-  SizeCamera: {fileID: 0}
 --- !u!114 &8639341311291141993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4462244449687991038}
+  - component: {fileID: 6837244535303798006}
   m_Layer: 0
   m_Name: HeadSprite
   m_TagString: Untagged
@@ -482,6 +482,20 @@ Transform:
   - {fileID: 5141452125286257946}
   m_Father: {fileID: 54360034983294399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6837244535303798006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836170564864922090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c64cf36951c8314aa6392364d1ce2bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Head: {fileID: 1836170564864922090}
+  lastFramePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1953852990553216199
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,8 +827,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 1}
-      key1: {r: 1, g: 0, b: 0, a: 1}
+      key0: {r: 0.21568629, g: 0.53333336, b: 0.16078432, a: 1}
+      key1: {r: 0.21568629, g: 0.53333336, b: 0.16078432, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
