@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2338412339294692699}
   m_Layer: 0
   m_Name: Container
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,10 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isLooping: 0
-  _isMoving: 1
   _spline: {fileID: 0}
   _speed: 8
   _distanceOffSet: 0
+  _isMoving: 0
 --- !u!1 &5728052353156042099
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,10 +257,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isLooping: 0
-  _isMoving: 1
   _spline: {fileID: 0}
   _speed: 3
   _distanceOffSet: 5
+  _isMoving: 1
 --- !u!96 &6340473407264228382
 TrailRenderer:
   serializedVersion: 3
