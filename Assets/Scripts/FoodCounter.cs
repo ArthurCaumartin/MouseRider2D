@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FoodCounter : MonoBehaviour
 {
+    public int foodCount;
     // Start is called before the first frame update
     void Start()
     {
