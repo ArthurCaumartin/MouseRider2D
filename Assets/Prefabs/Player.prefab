@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c6d888e9c33864684ca767e3ac1af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceMax: 0
-  _speed: 0
+  _distanceMax: 5
+  _speed: 0.2
 --- !u!114 &5839253560899802700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1bf2334c251234781054cd54f80233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shaking: {fileID: 0}
+  SizeCamera: {fileID: 0}
 --- !u!114 &8639341311291141993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,13 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33fb975b2545814c887c9465a59f523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isSlowingTime: 0
-  _slowTimeScale: 0
-  _transitionSpeed: 0
-  _slowTimeUseThresold: 0
-  _maxSlowTimeCappacity: 0
-  _slowTimeDeccay: 0
-  _slowTimeRegen: 0
+  _slowTimeScale: 0.2
+  _chargeNumber: 3
+  _durationPerCharge: 2
+  _rechargeCoolDown: 4
 --- !u!58 &1614104808901142043
 CircleCollider2D:
   m_ObjectHideFlags: 0
