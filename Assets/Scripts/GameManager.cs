@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerHit()
     {
-        print("Wow t nul...");
+        // print("Wow t nul...");
     }
 
     public void ReturnToMenu()

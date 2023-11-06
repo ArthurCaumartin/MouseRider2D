@@ -18,7 +18,10 @@ public class MenuManager : MonoBehaviour
 
     public void StartLevel(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        Transitioner.instance.DoGameTransition(false, () =>
+        {
+            SceneManager.LoadScene(sceneName);
+        });
     }
 
     public void SetMenu()
