@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelArthur.unity
     guid: 8a587a6a366ce4c4b9602bc75c2c528c
+  - enabled: 1
+    path: Assets/Scenes/IrisScene.unity
+    guid: 774cc26680226344fbcd20066b5a8600
   m_configObjects: {}
