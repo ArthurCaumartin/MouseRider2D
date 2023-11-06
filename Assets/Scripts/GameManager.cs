@@ -11,19 +11,26 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        print("Game Manager call trans");
+        Transitioner.instance.DoGameTransition(true, null);
+    }
+
     [ContextMenu("EndLevel")]
     public void EndLevel()
     {
         print("Level End !");
+        Transitioner.instance.DoGameTransition(false, ReturnToMenu);
     }
 
     public void PlayerHit()
     {
-        print("Wow t nul...");
+        // print("Wow t nul...");
     }
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MenuScene");
     }
 }

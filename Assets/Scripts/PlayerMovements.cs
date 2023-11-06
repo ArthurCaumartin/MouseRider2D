@@ -34,12 +34,12 @@ public class PlayerMovements : MonoBehaviour
         Vector2 positionToSet;
         if (Vector2.Distance(_screenCenterWorldPos, _worldMousePosition) < _distanceMax)
         {
-            print("In range");
+            // print("In range");
             positionToSet = _containerMousePosition;
         }
         else
         {
-            print("Not In range");
+            // print("Not In range");
             positionToSet = (_worldMousePosition - _screenCenterWorldPos).normalized * _distanceMax;
         }
 
