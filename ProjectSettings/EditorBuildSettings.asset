@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 0acab748b59fe904fa3e9468e6ea9b56
   - enabled: 1
-    path: Assets/Scenes/BaseLevel.unity
+    path: Assets/Scenes/OscarScene.unity
     guid: 26fb9218f27b7f143b8b5dbc54bedc58
   m_configObjects: {}
