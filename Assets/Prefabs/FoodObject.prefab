@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3eaf5da64c02a4db9bfdabb87b134b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationDuration: 0.5
   foodForm:
     serializedVersion: 2
     m_Curve:
