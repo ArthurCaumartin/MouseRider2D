@@ -262,6 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594572217406970947}
   - component: {fileID: 3800164832461084833}
+  - component: {fileID: 6670756627373872333}
   m_Layer: 0
   m_Name: Static Obstacle
   m_TagString: Obstacle
@@ -342,6 +343,18 @@ PolygonCollider2D:
       - {x: 0.32585597, y: -0.36182404}
       - {x: 1.0025916, y: -0.00019460917}
   m_UseDelaunayMesh: 0
+--- !u!114 &6670756627373872333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083778467355588724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfa7b3151582714eac47b4da859c170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7287355329146658274
 GameObject:
   m_ObjectHideFlags: 0
