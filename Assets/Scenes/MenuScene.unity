@@ -1236,6 +1236,22 @@ PrefabInstance:
       propertyPath: _onCompleteEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2755386069725743972, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755386069725743972, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 358681800}
+    - target: {fileID: 2755386069725743972, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755386069725743972, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4622277535421444556, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
       propertyPath: m_text
       value: Back
