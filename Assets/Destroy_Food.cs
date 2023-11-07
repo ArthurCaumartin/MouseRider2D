@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class Destroy_Food : MonoBehaviour
 {
+    [SerializeField] float AnimationDuration;
     public AnimationCurve foodForm;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,7 +13,7 @@ public class Destroy_Food : MonoBehaviour
         if (foodCounter != null)
         {
             foodCounter.FoodCheck(1);
-            transform.DOScale(0f, 1f)
+            transform.DOScale(0f, AnimationDuration)
                 .SetEase(foodForm)
                 .OnComplete(() =>
                 {

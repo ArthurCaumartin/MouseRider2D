@@ -219,7 +219,7 @@ MonoBehaviour:
   _pointA: {fileID: 2036597219345401135}
   _pointB: {fileID: 4721816950222761629}
   _speed: 5.09
-  _rotateSpeed: 400
+  _rotateSpeed: 0
 --- !u!1 &3757407319954092462
 GameObject:
   m_ObjectHideFlags: 0
