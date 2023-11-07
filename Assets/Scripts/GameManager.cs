@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     void StartLevel()
     {
         _container.GetComponent<SplineMover>().CanMove(true);
-        _container.GetComponentInChildren<PlayerMovements>().CanMove(true);
     }
 
     [ContextMenu("EndLevel")]
