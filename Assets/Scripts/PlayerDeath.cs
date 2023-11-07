@@ -3,6 +3,7 @@ using DG.Tweening;
 public class PlayerDeath : MonoBehaviour
 {
     public Shaking shaking; 
+    public PlayerMovements playermovement;
    private void OnTriggerEnter2D(Collider2D other) 
    {  
         if(other.CompareTag ("Obstacle"))
@@ -19,5 +20,9 @@ public class PlayerDeath : MonoBehaviour
    public void CameraDezoom()
    {
      Camera.main.DOOrthoSize(9f, 3f);
+   }
+   private void Update() 
+   {
+     playermovement.GetComponent<PlayerMovements>();
    }
 }
