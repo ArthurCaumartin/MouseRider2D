@@ -1,8 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using DG.Tweening;
 
 public class SplineMover : MonoBehaviour
 {
@@ -54,6 +53,15 @@ public class SplineMover : MonoBehaviour
     public void SetSpeed(float value)
     {
         _speed = value;
+    }
+
+    public void LerpSpeed(float value)
+    {
+        float oldSpeed = _speed;
+        DOTween.To((time) =>
+        {
+            _speed = time;
+        }, oldSpeed, value, .5f);
     }
 
     public void CanMove(bool value)
