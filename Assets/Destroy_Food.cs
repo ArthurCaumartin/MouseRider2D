@@ -10,6 +10,8 @@ public class Destroy_Food : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         FoodCounter foodCounter = other.GetComponent<FoodCounter>();
+                    ParticleSystem particle = GetComponentInChildren<ParticleSystem>();
+                    particle.Play();
         if (foodCounter != null)
         {
             foodCounter.FoodCheck(1);
@@ -17,9 +19,12 @@ public class Destroy_Food : MonoBehaviour
                 .SetEase(foodForm)
                 .OnComplete(() =>
                 {
-                    Destroy(gameObject);
-                });
 
+                    particle.transform.parent = null;
+                    Destroy(gameObject);
+                    
+                });
+          
         }
         
     }
