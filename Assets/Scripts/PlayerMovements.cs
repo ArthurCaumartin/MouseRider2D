@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovements : MonoBehaviour
 {
+    [SerializeField] private bool _canMoveOnSceneStart;
     [SerializeField] private float _distanceMax;
     [SerializeField] private float _speed;
     private float _playerDistance;
@@ -14,6 +15,11 @@ public class PlayerMovements : MonoBehaviour
 
     private Vector2 velocity;
     private bool _canMove = false;
+
+    void Start()
+    {
+        _canMove = _canMoveOnSceneStart;
+    }
 
 
     private void Update()
