@@ -7,17 +7,18 @@ public class SplineDebug : MonoBehaviour
     [SerializeField] private Spline _spline;
     [SerializeField] private Color _color;
     [SerializeField, Range(.01f, 1)] private float _raduis;
-    [SerializeField, Range(0.001f, .5f)] private float _gap;
+    [SerializeField, Range(0.1f, 10f)] private float _gap;
 
     void OnDrawGizmos()
     {
-        if(!_spline || _gap < 0.001)
+        if(!_spline || _gap < 0.1)
             return;
 
         Gizmos.color = _color;
-        for(float i = 0; i < _spline.length(); i += _gap)
+
+        for(float l = 0; l < _spline.length(); l += _gap)
         {
-            Gizmos.DrawSphere(_spline.computePoint(i), _raduis);
+            Gizmos.DrawSphere(_spline.computePointWithLength(l), _raduis);
         }
     }
 }
