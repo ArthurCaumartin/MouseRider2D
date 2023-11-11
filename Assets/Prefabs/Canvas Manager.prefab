@@ -446,8 +446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 3647907175127407542}
-  _tongue: {fileID: 1247213846499443356}
-  _tongueOffset: 5
+  _tongue: {fileID: 2151112226421010801}
+  _tongueOffset: 100
   _startTonguePos: {x: 0, y: 0}
 --- !u!1 &6280089539385574132
 GameObject:
