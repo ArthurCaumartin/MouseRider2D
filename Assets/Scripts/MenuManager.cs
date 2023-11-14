@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = true;
         print("Menu call trans");
         Transitioner.instance.DoGameTransition(true, null);
     }

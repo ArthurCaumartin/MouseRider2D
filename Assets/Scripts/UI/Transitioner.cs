@@ -42,6 +42,7 @@ public class Transitioner : MonoBehaviour
         _image.transform.localScale = _scaleStart;
         _image.transform.DOScale(_scaleTarget, _transitionDuration)
         .SetEase(_transitionAnimation)
+        .SetUpdate(true)
         .OnComplete(() =>
         {
             if(afterTransition != null)
