@@ -24,7 +24,7 @@ public class MouseTracker : MonoBehaviour
         transform.position = _worldMousePosition + _offSet;
 
         float fill = _timeSlower.GetFillAmount();
-        print("Slow time fill = " + fill);
+        // print("Slow time fill = " + fill);
         _image.fillAmount = fill;
     }
 }
