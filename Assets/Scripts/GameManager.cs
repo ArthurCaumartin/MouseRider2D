@@ -29,14 +29,22 @@ public class GameManager : MonoBehaviour
     public void EndLevel()
     {
         print("Level End !");
-        _container.GetComponent<SplineMover>().CanMove(false);
-        _container.GetComponentInChildren<PlayerMovements>().CanMove(false);
+        PauseLevel();
         Transitioner.instance.DoGameTransition(false, ReturnToMenu);
     }
 
-    public void PlayerHit()
+    public void PauseLevel()
     {
-        // print("Wow t nul...");
+        Time.timeScale = 0;
+        _container.GetComponent<SplineMover>().CanMove(false);
+        _container.GetComponentInChildren<PlayerMovements>().CanMove(false);
+    }
+
+    public void UnpauseLevel()
+    {
+        Time.timeScale = 1;
+        _container.GetComponent<SplineMover>().CanMove(true);
+        _container.GetComponentInChildren<PlayerMovements>().CanMove(true);
     }
 
     public void ReturnToMenu()
