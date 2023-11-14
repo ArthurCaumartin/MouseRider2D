@@ -51,4 +51,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MenuScene");
     }
+
+    public void Finish()
+    {
+        Transitioner.instance.DoGameTransition(false, ReturnToMenu);
+    }
 }
