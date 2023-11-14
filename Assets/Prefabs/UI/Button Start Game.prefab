@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelIndex: 0
-  _activeColor: {r: 1, g: 1, b: 1, a: 1}
+  _activeColor: {r: 0.9607843, g: 0.92156863, b: 0.5568628, a: 1}
   _foodImage:
   - {fileID: 6711791276268004414}
   - {fileID: 4510392493763525528}
@@ -492,6 +492,18 @@ PrefabInstance:
     - target: {fileID: 2349814379550395297, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Name
       value: Food Image (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.b
+      value: 0.22352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.g
+      value: 0.36862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.r
+      value: 0.38431373
       objectReference: {fileID: 0}
     - target: {fileID: 8461345707979025233, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Pivot.x
@@ -606,6 +618,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food Image (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.b
+      value: 0.22352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.g
+      value: 0.36862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.r
+      value: 0.38431373
+      objectReference: {fileID: 0}
     - target: {fileID: 8461345707979025233, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -718,6 +742,18 @@ PrefabInstance:
     - target: {fileID: 2349814379550395297, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Name
       value: Food Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.b
+      value: 0.22352941
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.g
+      value: 0.36862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: m_Color.r
+      value: 0.38431373
       objectReference: {fileID: 0}
     - target: {fileID: 8461345707979025233, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Pivot.x
