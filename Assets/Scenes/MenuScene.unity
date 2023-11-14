@@ -651,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &694304131
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1035,18 +1035,6 @@ PrefabInstance:
     - target: {fileID: 6262137410693227375, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161955006851570462, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161955006851570462, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161955006851570462, guid: a44f8e941081d6344b599d6fe2b4953e, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1544,7 +1532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1975996374
 RectTransform:
   m_ObjectHideFlags: 0

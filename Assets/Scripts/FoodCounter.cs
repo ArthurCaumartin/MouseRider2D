@@ -10,7 +10,7 @@ public class FoodCounter : MonoBehaviour
     {
         Debug.Log("Eat");
         foodCount += foodToAdd;
-        CanvasManager.instance.UpdateFoodCOunter(foodCount);
+        //CanvasManager.instance.UpdateFoodCOunter(foodCount);
         SavePlayerPref.SaveFoodParameter(foodCount);
         if (foodCount == 3)
         {
