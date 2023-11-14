@@ -26,10 +26,10 @@ public class TimeSlower : MonoBehaviour
         Slowtime();
         ChargeCoolDown();
 
-        if(CanvasManager.instance)
-            CanvasManager.instance.UpdateSlowTimeJauge(GetFillAmount());
-        else
-            print("No CanvasManager");
+        // if(CanvasManager.instance)
+        //     CanvasManager.instance.UpdateSlowTimeJauge(GetFillAmount());
+        // else
+        //     print("No CanvasManager");
     }
 
     private void Slowtime()
