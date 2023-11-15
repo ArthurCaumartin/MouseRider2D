@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c6d888e9c33864684ca767e3ac1af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canMoveOnSceneStart: 0
   _distanceMax: 5
   _speed: 0.2
 --- !u!114 &5839253560899802700
@@ -134,6 +135,7 @@ MonoBehaviour:
   _chargeNumber: 3
   _durationPerCharge: 2
   _rechargeCoolDown: 4
+  _timeScaleResetSpeed: 5
 --- !u!58 &1614104808901142043
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -208,6 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811fb8bee840bec4b83892d423b1a7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scribescore: 0
+  foodForm:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   foodCount: 0
 --- !u!1 &131544375976732562
 GameObject:

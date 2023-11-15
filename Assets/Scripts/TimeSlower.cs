@@ -12,6 +12,7 @@ public class TimeSlower : MonoBehaviour
     [SerializeField] private float _durationPerCharge;
     [Space]
     [SerializeField] private float _rechargeCoolDown;
+    [SerializeField] private float _timeScaleResetSpeed;
     private float _currentSlowTimeDuration;
     private int _maxChargeNumber;
     private float _cooldownTimer;
@@ -25,11 +26,6 @@ public class TimeSlower : MonoBehaviour
     {
         Slowtime();
         ChargeCoolDown();
-
-        // if(CanvasManager.instance)
-        //     CanvasManager.instance.UpdateSlowTimeJauge(GetFillAmount());
-        // else
-        //     print("No CanvasManager");
     }
 
     private void Slowtime()
@@ -41,7 +37,7 @@ public class TimeSlower : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1;
+            Time.timeScale = Mathf.Lerp(Time.timeScale, 1, Time.unscaledDeltaTime * _timeScaleResetSpeed);
         }
     }
 
