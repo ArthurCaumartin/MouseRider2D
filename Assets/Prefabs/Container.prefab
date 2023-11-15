@@ -302,11 +302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54360034983294399, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 54360034983294399, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 54360034983294399, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: m_LocalPosition.z
@@ -339,6 +339,22 @@ PrefabInstance:
     - target: {fileID: 54360034983294399, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614104808901142043, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832525111264080059, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832525111264080059, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832525111264080059, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.4189133
       objectReference: {fileID: 0}
     - target: {fileID: 5839253560899802700, guid: d3274199e8b73c143b76f14fca4cae25, type: 3}
       propertyPath: shaking
