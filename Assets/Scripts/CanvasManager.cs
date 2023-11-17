@@ -22,7 +22,6 @@ public class CanvasManager : MonoBehaviour
         }
         FoodImageList[index].color = Color.yellow;
     }
-
     void Awake()
     {
         instance = this;
