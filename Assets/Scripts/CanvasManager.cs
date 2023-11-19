@@ -33,17 +33,4 @@ public class CanvasManager : MonoBehaviour
     {
         foodcounter.GetComponent<FoodCounter>();
     }
-    private void Update() 
-    {
-        RaimbowMoney();
-    }
-    public void RaimbowMoney()
-    {
-        if(foodcounter.foodCount >= 3)
-        {
-            FoodImageList[0].color = Color.blue;
-            FoodImageList[1].color = Color.white;
-            FoodImageList[2].color = Color.red;
-        }
-    }
 }

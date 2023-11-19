@@ -13,19 +13,19 @@ public class SavePlayerPref : MonoBehaviour
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if(currentSceneName.Contains("Arthur"))
+        if(currentSceneName.Contains("Arthur") && PlayerPrefs.GetInt(LEVEL1_FOODCOUNT_ID) < value )
         {
             PlayerPrefs.SetInt(SavePlayerPref.LEVEL1_FOODCOUNT_ID, value);
             return;
         }
 
-        if(currentSceneName.Contains("Iris"))
+        if(currentSceneName.Contains("Iris") && PlayerPrefs.GetInt(LEVEL2_FOODCOUNT_ID) < value)
         {
             PlayerPrefs.SetInt(SavePlayerPref.LEVEL2_FOODCOUNT_ID, value);
             return;
         }
 
-        if(currentSceneName.Contains("Oscar"))
+        if(currentSceneName.Contains("Oscar") && PlayerPrefs.GetInt(LEVEL3_FOODCOUNT_ID) < value)
         {
             PlayerPrefs.SetInt(SavePlayerPref.LEVEL3_FOODCOUNT_ID, value);
             return;
