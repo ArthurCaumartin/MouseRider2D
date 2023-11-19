@@ -6,24 +6,24 @@ using UnityEngine.UI;
 
 public class ColorSwitch : MonoBehaviour
 {
-    public Color newColor = Color.black;
-    public float hue;
-    public bool switchColor = false;
-    public Image image;
     public float speed;
     public float Offset;
-    public FoodCounter foodcounter;
+    public bool switchColor = false;
+
+    private Color newColor = Color.black;
+    private float hue;
+    private Image image;
+
     void Start()
     {
         image = GetComponent<Image>();
     }
+
     void Update()
     {
-        foodcounter.GetComponent<FoodCounter>();
-        Debug.Log(switchColor);
-        if(foodcounter.foodCount == 3)
+        if(switchColor)
         {
-            hue = Mathf.InverseLerp(-1, 1, Mathf.Sin(Time.time));
+            hue = Mathf.InverseLerp(-1, 1, Mathf.Sin(Offset +Time.time * speed));
             newColor = Color.HSVToRGB(hue, 1, 1);
             image.color = newColor;
         }
