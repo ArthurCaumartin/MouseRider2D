@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shaking: {fileID: 0}
-  audioDeath: {fileID: 8300000, guid: 9b8cb47fdc1f3ea4d8bbafc21df7fa75, type: 3}
+  audioDeath: {fileID: 8300000, guid: 7f005a34c92d1d74dbb6588417225ed4, type: 3}
 --- !u!114 &8639341311291141993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   _slowTimeScale: 0.2
   _chargeNumber: 3
   _durationPerCharge: 2
-  _rechargeCoolDown: 4
+  _rechargeCoolDown: 1e+9
   _timeScaleResetSpeed: 5
   audioSlow: {fileID: 0}
 --- !u!58 &1614104808901142043

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3eaf5da64c02a4db9bfdabb87b134b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioCoin: {fileID: 8300000, guid: 0817a4c135c4b9b4ab10c2afa2226398, type: 3}
+  audioCoin: {fileID: 8300000, guid: 7a6f7bf11d509ac4bb0248ee5de2105c, type: 3}
   AnimationDuration: 0.25
   foodForm:
     serializedVersion: 2
