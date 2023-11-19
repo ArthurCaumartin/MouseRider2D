@@ -17,7 +17,7 @@ public class PlayerDeath : MonoBehaviour
         
         {
           player_Death.PlayOneShot(audioDeath);
-          GameManager.instance.EndLevel();
+          GameManager.instance.RestartScene();
           GetComponentInParent<SplineMover>()._isMoving  = false;
           shaking.GetComponent<Shaking>();
           shaking.start = true;
