@@ -16,7 +16,7 @@ public class PlayerDeath : MonoBehaviour
         if(other.CompareTag ("Obstacle"))
         
         {
-            player_Death.PlayOneShot(audioDeath);
+          player_Death.PlayOneShot(audioDeath);
           GameManager.instance.EndLevel();
           GetComponentInParent<SplineMover>()._isMoving  = false;
           shaking.GetComponent<Shaking>();

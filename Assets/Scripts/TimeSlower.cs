@@ -13,9 +13,12 @@ public class TimeSlower : MonoBehaviour
     [Space]
     [SerializeField] private float _rechargeCoolDown;
     [SerializeField] private float _timeScaleResetSpeed;
+    [SerializeField] private AudioClip audioSlow = null;
+
     private float _currentSlowTimeDuration;
     private int _maxChargeNumber;
     private float _cooldownTimer;
+    private AudioSource player_Slow;
 
     void Start()
     {
@@ -30,13 +33,17 @@ public class TimeSlower : MonoBehaviour
 
     private void Slowtime()
     {
+        player_Slow = GetComponent<AudioSource>();
+
         if (_currentSlowTimeDuration > 0)
         {
+            
             _currentSlowTimeDuration -= Time.unscaledDeltaTime;
             Time.timeScale = _slowTimeScale;
+            player_Slow.PlayOneShot(audioSlow);
         }
         else
-        {
+        {           
             Time.timeScale = Mathf.Lerp(Time.timeScale, 1, Time.unscaledDeltaTime * _timeScaleResetSpeed);
         }
     }
