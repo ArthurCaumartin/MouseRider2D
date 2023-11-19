@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     //! Call by End trigger Event
     public void Finish()
     {
+        Cursor.lockState = CursorLockMode.None;
         SetPlayerMove(false);
         CanvasManager.instance.PopWinMenu();
     }

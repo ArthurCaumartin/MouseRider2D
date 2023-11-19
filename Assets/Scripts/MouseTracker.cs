@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class MouseTracker : MonoBehaviour
 {
-    public Vector2 _offSet;
-    private Vector2 _worldMousePosition;
+    public Vector3 _offSet;
+    private Vector3 _worldMousePosition;
     private Image _image;
     private TimeSlower _timeSlower;
 
@@ -21,6 +21,7 @@ public class MouseTracker : MonoBehaviour
     void Update()
     {
         _worldMousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        _worldMousePosition.z = -5;
         transform.position = _worldMousePosition + _offSet;
 
         float fill = _timeSlower.GetFillAmount();
