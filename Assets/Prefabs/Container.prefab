@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 89906829528702889}
   - component: {fileID: 2338412339294692699}
+  - component: {fileID: 2956610484412757424}
   m_Layer: 0
   m_Name: Container
   m_TagString: Container
@@ -52,6 +53,52 @@ MonoBehaviour:
   _speed: 8
   _distanceOffSet: 0
   _isMoving: 0
+--- !u!114 &2956610484412757424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344868079929548154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69935a3cb888c864184841694b8ab927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circleSprite: {fileID: 678811388731910324}
+  _animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0025901794
+      value: -0.011779785
+      inSlope: 0.06408963
+      outSlope: 0.06408963
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.90209657
+      value: 0.04620126
+      inSlope: 0.7186789
+      outSlope: 0.7186789
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.058173034
+      outWeight: 0.49723083
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 19.883675
+      outSlope: 19.883675
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.026184468
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5728052353156042099
 GameObject:
   m_ObjectHideFlags: 0
