@@ -828,6 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59fbc3efcb798e47acc65b24c720aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodcounter: {fileID: 0}
   FoodImageList:
   - {fileID: 5103904800215914255}
   - {fileID: 8524264356605438111}
@@ -1368,18 +1369,6 @@ PrefabInstance:
     - target: {fileID: 2349814379550395297, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Name
       value: Food Image 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
-      propertyPath: m_Color.b
-      value: 0.22352941
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
-      propertyPath: m_Color.g
-      value: 0.36862746
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771559586228272, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
-      propertyPath: m_Color.r
-      value: 0.38431373
       objectReference: {fileID: 0}
     - target: {fileID: 8461345707979025233, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Pivot.x
