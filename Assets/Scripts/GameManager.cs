@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour
 
     public void Finish()
     {
-        Transitioner.instance.DoGameTransition(false, ReturnToMenu);
+        _container.GetComponent<SplineMover>().CanMove(false);
+        _container.GetComponentInChildren<PlayerMovements>().CanMove(false);
+        CanvasManager.instance.PopWinMenu();
     }
 }
