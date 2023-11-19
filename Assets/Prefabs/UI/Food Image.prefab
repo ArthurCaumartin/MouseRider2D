@@ -88,9 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a821b7884b8b11a4dbbc57e5cdf4ca01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newColor: {r: 0, g: 0, b: 0, a: 1}
-  hue: 0
-  switchColor: 1
-  image: {fileID: 0}
-  speed: 0
+  speed: 1.5
   Offset: 0
+  switchColor: 0

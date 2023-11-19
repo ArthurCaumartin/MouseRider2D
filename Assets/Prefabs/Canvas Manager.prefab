@@ -828,12 +828,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59fbc3efcb798e47acc65b24c720aa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodcounter: {fileID: 0}
   FoodImageList:
   - {fileID: 5103904800215914255}
   - {fileID: 8524264356605438111}
   - {fileID: 2570540133657081019}
-  FoodList: []
+  FoodList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &6430767960353991134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1112,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4249941779609175644}
     m_Modifications:
+    - target: {fileID: 2302412244652687876, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: Offset
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2349814379550395297, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Name
       value: Food Image 3
@@ -1238,6 +1244,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9218724628467988442}
     m_Modifications:
+    - target: {fileID: 2302412244652687876, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: Offset
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2349814379550395297, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Name
       value: Food Image 2
@@ -1366,6 +1376,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3030743130728360958}
     m_Modifications:
+    - target: {fileID: 2302412244652687876, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
+      propertyPath: Offset
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2349814379550395297, guid: 30b8dc2ef37900b40b5e9c396cab3622, type: 3}
       propertyPath: m_Name
       value: Food Image 1
