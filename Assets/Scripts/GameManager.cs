@@ -36,15 +36,13 @@ public class GameManager : MonoBehaviour
     public void PauseLevel()
     {
         Time.timeScale = 0;
-        _container.GetComponent<SplineMover>().CanMove(false);
-        _container.GetComponentInChildren<PlayerMovements>().CanMove(false);
+        SetPlayerMove(false);
     }
 
     public void UnpauseLevel()
     {
         Time.timeScale = 1;
-        _container.GetComponent<SplineMover>().CanMove(true);
-        _container.GetComponentInChildren<PlayerMovements>().CanMove(true);
+        SetPlayerMove(true);
     }
 
     public void ReturnToMenu()
@@ -52,10 +50,25 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MenuScene");
     }
 
+    //! Call by End trigger Event
     public void Finish()
     {
-        _container.GetComponent<SplineMover>().CanMove(false);
-        _container.GetComponentInChildren<PlayerMovements>().CanMove(false);
+        SetPlayerMove(false);
         CanvasManager.instance.PopWinMenu();
+    }
+
+    public void RestartScene()
+    {
+        SetPlayerMove(false);
+        Transitioner.instance.DoGameTransition(false, () =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        });
+    }
+
+    void SetPlayerMove(bool value)
+    {
+        _container.GetComponent<SplineMover>().CanMove(value);
+        _container.GetComponentInChildren<PlayerMovements>().CanMove(value);
     }
 }

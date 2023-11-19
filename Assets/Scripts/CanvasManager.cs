@@ -9,6 +9,7 @@ public class CanvasManager : MonoBehaviour
     public static CanvasManager instance;
     [SerializeField] private Transform _winMenu;
     [SerializeField] private float _winMenuAnimationDuration;
+    [SerializeField] private List<Image> _menuFoodImage;
     public List<Image> FoodImageList = new List<Image>();
     public List<Destroy_Food> FoodList = new List<Destroy_Food>();
 
@@ -36,6 +37,7 @@ public class CanvasManager : MonoBehaviour
             }
         }
         FoodImageList[index].color = Color.yellow;
+        _menuFoodImage[index].color = Color.yellow;
     }
 
     public void StartFoodColorSwitch()
@@ -48,10 +50,7 @@ public class CanvasManager : MonoBehaviour
 
     public void ReplayLevel()
     {
-        Transitioner.instance.DoGameTransition(false, () =>
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        });
+        GameManager.instance.RestartScene();
     }
 
     public void GoToMenu()
